@@ -30,8 +30,8 @@ def abrir_nova_janela():
     nova_janela.geometry("300x100")
     tk.Label(nova_janela, text="Esta é uma janela secundária.").pack(pady=20)
     #nova_janela.transient(janela) # Faz com que a nova janela fique acima da janela principal
-    #nova_janela.grab_set() # Impede interações com a janela  principal (modal)
-    #janela.wait_window(nova_janela) # Espera a nova janela ser fechada (para diálogos modais)
+    nova_janela.grab_set() # Impede interações com a janela  principal (modal)
+    janela.wait_window(nova_janela) # Espera a nova janela ser fechada (para diálogos modais)
 
 janela = tk.Tk()
 janela.title("widgets úteis")
